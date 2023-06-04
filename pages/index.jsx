@@ -3,8 +3,8 @@ import styles from "../styles/Home.module.css";
 import Container from "../components/container";
 import Button from "../components/button";
 import Input from "../components/Input";
-import containerStyles from "./Container.module.css";
-import buttonStyles from "./Button.module.css";
+import ContainerStyles from "./Container.module.css";
+import ButtonStyles from "./Button.module.css";
 
 
 export default function Home() {
