@@ -1,9 +1,9 @@
 import { useState } from "react";
-import styles from "../styles/Home.module.css";
+import homeStyles from "../styles/Home.module.css";
 import Container from "../components/container";
 import Button from "../components/button";
 import Input from "../components/Input";
-import styles from "./Container.module.css";
+import containerStyles from "./Container.module.css";
 import buttonStyles from "./Button.module.css";
 
 export default function Home() {
@@ -18,7 +18,7 @@ export default function Home() {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={homeStyles.container}>
       <Container>
         <h1>Welcome to Kora Dapp</h1>
         <p>A high dynamic UI dApp for managing and trading coins.</p>
@@ -32,7 +32,9 @@ export default function Home() {
           value={buyAmount}
           onChange={(e) => setBuyAmount(parseInt(e.target.value))}
         />
-        <Button onClick={handleBuyCoins}>Buy</Button>
+        <Button className={buttonStyles.button} onClick={handleBuyCoins}>
+          Buy
+        </Button>
       </Container>
 
       <Container>
