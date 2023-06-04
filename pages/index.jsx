@@ -1,6 +1,8 @@
 import { useState } from "react";
 import styles from "../styles/Home.module.css";
-import InstructionsComponent from "../components/InstructionsComponent";
+import Container from "../components/Container";
+import Button from "../components/Button";
+import Input from "../components/Input";
 
 export default function Home() {
   const [coinBalance, setCoinBalance] = useState(0);
@@ -14,25 +16,27 @@ export default function Home() {
   };
 
   return (
-    <div>
-      <main className={styles.main}>
-        <InstructionsComponent></InstructionsComponent>
+    <div className={styles.container}>
+      <Container>
+        <h1>Welcome to Kora Dapp</h1>
+        <p>A high dynamic UI dApp for managing and trading coins.</p>
+      </Container>
 
-        <div>
-          <h2>Buy Coins</h2>
-          <input
-            type="number"
-            value={buyAmount}
-            onChange={(e) => setBuyAmount(parseInt(e.target.value))}
-          />
-          <button onClick={handleBuyCoins}>Buy</button>
-        </div>
+      <Container>
+        <h2>Buy Coins</h2>
+        <Input
+          type="number"
+          placeholder="Enter amount"
+          value={buyAmount}
+          onChange={(e) => setBuyAmount(parseInt(e.target.value))}
+        />
+        <Button onClick={handleBuyCoins}>Buy</Button>
+      </Container>
 
-        <div>
-          <h2>Coin Balance: {coinBalance}</h2>
-          {/* Display the user's coin balance */}
-        </div>
-      </main>
+      <Container>
+        <h2>Coin Balance: {coinBalance}</h2>
+        {/* Display the user's coin balance */}
+      </Container>
     </div>
   );
 }
