@@ -73,55 +73,42 @@ To get started with this boilerplate, you'll need to have the following software
 1. Start the local development server:
    ```
    yarn run dev
-   ```
-2. Open your browser and navigate to [`http://localhost:3000/`](http://localhost:3000/) to view the dApp in action.
+Kora Dapp
 
-### Deploying to Netlify
+Kora Dapp is a high dynamic UI decentralized application (dApp) designed for managing and trading coins. It provides a user-friendly interface for users to interact with the blockchain and perform various operations related to buying and managing coins.
 
-This boilerplate is set up to be deployed on Netlify and you can directly deploy this project by clicking the button below:
+Features
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/alchemyplatform/netlify-alchemy-dapp-boilerplates)
+Buy Coins: Users can enter the desired amount of coins and click the "Buy" button to purchase coins.
+Coin Balance: The application displays the user's current coin balance, which updates dynamically based on the coins bought.
+Technologies Used
 
- If you prefer to deploy it manually, you can follow these steps:
+React: JavaScript library for building user interfaces.
+Web3.js: JavaScript library for interacting with Ethereum and other blockchain networks.
+CSS Modules: Scoped CSS approach for styling components.
+Netlify: Deployment platform for hosting the dApp.
+Getting Started
 
-1. Sign up for a Netlify account at [netlify.com](https://www.netlify.com/) if you don't already have one.
-2. Install the Netlify CLI:
-   ```
-   npm install -g netlify-cli
-   ```
-3. Run the following command to deploy your dApp to Netlify:
-   ```
-   netlify deploy
-   ```
-4. Follow the prompts and provide the required information. Your dApp will be deployed and accessible via a unique URL.
+To run the project locally, follow these steps:
 
-## Project Structure
+Clone the repository: git clone <repository-url>
+Install dependencies: npm install
+Start the development server: npm run dev
+Open your browser and navigate to http://localhost:3000
+Folder Structure
 
-The boilerplate project is a Next.js application with the following structure:
+The project structure is organized as follows:
 
-```
-📦root
- ┣ 📂components
- ┃ ┣ 📂navigation
- ┃ ┃ ┗ 📜navbar.jsx
- ┃ ┗ 📜InstructionsComponent.jsx
- ┣ 📂layout
- ┃ ┗ 📜mainLayout.jsx
- ┣ 📂pages
- ┃ ┣ 📜_app.js
- ┃ ┗ 📜index.jsx
- ┣ 📂public
- ┃ ┗ 📜cw3d-logo.png
- ┣ 📂styles
- ┃ ┣ 📜Home.module.css
- ┃ ┣ 📜InstructionsComponent.module.css
- ┃ ┣ 📜Navbar.module.css
- ┃ ┗ 📜globals.css
- ┣ 📜.gitignore
- ┣ 📜README.md
- ┣ 📜next.config.js
- ┣ 📜package-lock.json
- ┗ 📜package.json
-```
+pages: Contains the main pages of the application.
+components: Contains reusable components used throughout the application.
+styles: Contains CSS modules for styling the components.
+Deployment
 
-Start editing the `pages/index.jsx` file to customize the project according to your own needs!
+The project is deployed using Netlify. Any changes pushed to the main branch will trigger a new deployment on the live site.
+
+You can access the live application at: https://your-app-url.com
+
+Contributing
+
+Contributions to the project are welcome. If you find any issues or have any suggestions for improvement, feel free to open an issue or submit a pull request.
+
