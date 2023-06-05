@@ -1,7 +1,7 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import homeStyles from "../styles/Home.module.css";
-import Container from "../components/container";
-import Button from "../components/button";
+import Container from "../components/Container";
+import Button from "../components/Button";
 
 export default function Home() {
   const [showContent, setShowContent] = useState(false);
