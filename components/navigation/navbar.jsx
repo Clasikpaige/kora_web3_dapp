@@ -1,13 +1,23 @@
-import { ConnectButton } from "@rainbow-me/rainbowkit";
-import styles from "../../styles/Navbar.module.css";
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Navbar from "./Navbar";
+import bot from "./bot.js";
+import stock from "./stock.js";
+import buycoin from "./buycoin.js";
+import Dashboard from "./dashbord.js"; // Import the Dashboard component
 
-export default function Navbar() {
+const App = () => {
   return (
-    <nav className={styles.navbar}>
-      <a href="https://randomhathacking.hashnode.dev/?a=create-web3-dapp" target="_blank">
-        <img className={styles.alchemy_logo} src="https://www.dropbox.com/s/xesd76qc9wjs1oj/Photo%2005-06-2023%2C%202%2048%2024%20AM.jpg?raw=1" alt="Logo"></img>
-      </a>
-      <ConnectButton></ConnectButton>
-    </nav>
+    <Router>
+      <Navbar />
+      <Switch>
+        <Route path="/bot.js" component={Page1} />
+        <Route path="/stock.js" component={Page2} />
+        <Route path="/buycoin.js" component={Page3} />
+        <Route path="/dashboard.js" component={Dashboard} /> {/* Add the route for the Dashboard component */}
+      </Switch>
+    </Router>
   );
-}
+};
+
+export default App;
