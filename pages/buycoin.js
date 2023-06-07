@@ -1,5 +1,5 @@
 import React from "react";
-import homeStyles from "../styles/Home.module.css";
+import styles from "../styles/Home.module.css";
 const Page3 = () => {
   return (
     <div>
